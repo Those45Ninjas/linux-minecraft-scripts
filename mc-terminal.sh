@@ -15,9 +15,12 @@ cd $minecraftDir
 echo "====================================================================="
 echo "Warning you have entered the screen sesstion for the minecraft server"
 echo
-echo "	PRESS Ctrl + A followed by D to exit without stopping the server"
+echo "  PRESS Ctrl + A followed by D to exit without stopping the server"
 echo
 echo "====================================================================="
+read -p "Are you sure you want to enter the screen session? y/n" -n 1 -r
 
-# Start the game in a GNU screen. It will detatch automatically.
-screen -r minecraft
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+	screen -r minecraft
+fi
