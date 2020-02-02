@@ -10,5 +10,5 @@ cd "$( dirname $0 )"
 source mc-config.cfg
 
 # List all the users who have ever connected to your server.
-screen -p 0 -S minecraft -X eval "\"list\""
+screen -p 0 -S minecraft -X eval "stuff \"list\""
 tail -n 1 $minecraftLog
