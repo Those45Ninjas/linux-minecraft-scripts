@@ -10,4 +10,5 @@ cd "$( dirname $0 )"
 source mc-config.cfg
 
 # List all the users who have ever connected to your server.
-cat $minecraftLog | grep "logged in with" | sed 's/[0-9]*-[0-9]*-[0-9]* [0-9]*:[0-9]*:[0-9]* \[INFO\] //g' | sed 's/\[\/[0-9]*.[0-9]*.[0-9]*.[0-9]*:[0-9]*\].*//g' | sort | uniq
+screen -p 0 -S minecraft -X eval "\"list\""
+tail -n 1 $minecraftLog

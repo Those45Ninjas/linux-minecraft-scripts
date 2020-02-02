@@ -14,6 +14,6 @@ source mc-config.cfg
 lines=1500
 
 # Show $lines number of recent authentications and show all new ones until CTRL+C is pressed.
-tail -n $lines -F $minecraftLog | grep -E "[0-9]*-[0-9]*-[0-9]* [0-9]*:[0-9]*:[0-9]* \[INFO\] [^/ ]"
+tail -n $lines -F $minecraftLog | grep -E "[[0-9]*:[0-9]*:[0-9]*] \[.*\/INFO]: .* lost connection: \|\] logged in with"
 
 # TODO Rewrite regex for new update

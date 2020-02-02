@@ -14,5 +14,5 @@ source mc-config.cfg
 lines=500
 
 # Show recent chats and live ones until CTRL+C is pressed.
-tail -n $lines -F $minecraftLog | grep "[0-9]*-[0-9]*-[0-9]* [0-9]*:[0-9]*:[0-9]* \[INFO\] <[a-zA-Z0-9_]*> [^@].*"
+tail -n $lines -F $minecraftLog | grep "[[0-9]*:[0-9]*:[0-9]*] \[Server thread/INFO\]: *<[a-zA-Z0-9_]*> [^@].*"
 
